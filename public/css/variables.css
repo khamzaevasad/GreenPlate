@@ -1,0 +1,15 @@
+:root {
+  /* Neutral Colors */
+  --neutral-900: #163a34;
+  --neutral-600: #355852;
+  --neutral-300: #d0c0c9;
+  --neutral-200: #e0e6e3;
+  --neutral-100: #f6f5f1;
+  --neutral-0: #ffffff;
+  /* Orange Colors */
+  --orange-500: #fe9f6b;
+  /* Teal Colors */
+  --teal-500: #49ac9b;
+  /* Indigo Colors */
+  --indigo-500: #697ddb;
+}
