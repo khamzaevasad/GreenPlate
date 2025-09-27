@@ -10,9 +10,9 @@
   </head>
   <body>
     <!-- header start -->
-    <header>
+    <header class="container">
       <!-- navbar -->
-      <nav class="navbar container">
+      <nav class="navbar">
         <div class="navbar-start">
           <a href="#">
             <img src="/images/logo.svg" alt="heder-logo" />
@@ -26,7 +26,40 @@
         <div class="navbar-end">
           <a class="btn-xs navbar-btn" href="#">Browse recipe</a>
         </div>
+
+        <!-- Hamburger (mobile) -->
+        <div class="hamburger" id="hamburger">
+          <span class="hamburger-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="16"
+              fill="none"
+              viewBox="0 0 18 16"
+            >
+              <path
+                fill="#163A34"
+                fill-rule="evenodd"
+                d="M17 16H1a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2ZM17 2H1a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2ZM17 9H1a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
       </nav>
+
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <span id="closeBtn">✖</span>
+        </div>
+        <a class="menu-subtitle" href="#">Home</a>
+        <a class="menu-subtitle" href="#">About</a>
+        <a class="menu-subtitle" href="#">Recipes</a>
+        <a class="menu-subtitle" href="#">Browse recipe</a>
+      </div>
+
+      <!-- Overlay -->
+      <div class="overlay" id="overlay"></div>
     </header>
     <!-- header end -->
 
@@ -37,5 +70,7 @@
     <!-- footer start -->
     <footer></footer>
     <!-- footer end -->
+
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

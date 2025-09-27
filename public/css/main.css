@@ -38,6 +38,7 @@ body {
   height: 100%;
   font-family: "Inter";
   background: var(--neutral-100);
+  padding-top: 3.2rem;
 }
 
 main {
