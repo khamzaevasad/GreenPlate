@@ -371,6 +371,133 @@
 }
 
 /* =======================
+   BUILT STYLES
+======================= */
+
+.built-container {
+  margin-top: 8.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.built-items {
+  margin-right: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--neutral-900);
+}
+.built-title {
+  font-weight: 800;
+  font-size: 4.8rem;
+  line-height: 100%;
+  letter-spacing: -3%;
+  margin-bottom: 2rem;
+}
+.built-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+}
+.built-subtitle-top {
+  margin-bottom: 2rem;
+}
+
+.highlight-subtitle {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.highlight-subtitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.4em;
+  background: #ffd6c9;
+  z-index: -1;
+  border-radius: 4px;
+}
+.built-img {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+/* =======================
+   READY STYLES
+======================= */
+
+.ready-container {
+  background: #e9ede8;
+  padding: 9.6rem;
+  border-radius: 12px;
+  margin-top: 8.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ready-container::before,
+.ready-container::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ready-container::before {
+  background-image: url("../images/pattern-fork.svg");
+  width: 3000px;
+  height: 300px;
+  bottom: -70px;
+  left: -80px;
+}
+
+.ready-container::after {
+  background-image: url("../images/pattern-knife.svg");
+  width: 250px;
+  height: 350px;
+  top: -40px;
+  right: -20px;
+}
+
+.ready-items {
+  color: var(--neutral-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  z-index: 100;
+}
+.ready-title {
+  font-weight: 800;
+  font-size: 4.8rem;
+  line-height: 100%;
+  letter-spacing: -0.3%;
+}
+.ready-subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+}
+
+.ready-btn {
+  margin-top: 4rem;
+  background: var(--neutral-900);
+  transition: 0.3s ease;
+}
+.ready-btn:hover {
+  background: var(--neutral-600);
+}
+
+/* =======================
    RESPONSIVE STYLES
 ======================= */
 
@@ -401,6 +528,18 @@
   .card-container {
     flex-direction: column;
   }
+
+  .built-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .built-items {
+    margin-left: 0;
+  }
+  .built-img {
+    margin-top: 2.8rem;
+  }
 }
 
 /* Tablet & Mobile */
@@ -419,9 +558,39 @@
   .hero-subtitle {
     font-size: 1.9rem;
   }
+  .built-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .built-items {
+    margin-left: 0;
+  }
+  .built-img {
+    margin-top: 2.8rem;
+  }
+
+  .ready-container::after {
+    background-image: url("../images/pattern-knife.svg");
+    width: 250px;
+    height: 350px;
+    top: -120px;
+    right: -50px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .ready-container::before,
+  .ready-container::after {
+    display: none;
+  }
+
+  .ready-container {
+    padding: 4.8rem 2.4rem;
+  }
+}
+
+/* @media (max-width: 767px) {
   .hero-title,
   .highlight-text {
     font-size: 5.2rem;
@@ -453,4 +622,15 @@
   .card-container {
     flex-direction: column;
   }
-}
+  .built-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .built-items {
+    margin-left: 0;
+  }
+  .built-img {
+    margin-top: 2.8rem;
+  }
+} */

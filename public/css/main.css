@@ -83,3 +83,10 @@ h1 {
 .hidden {
   display: none;
 }
+
+.line {
+  width: 100%;
+  border: solid 1px #e0e6e3;
+  margin-top: 9.7rem;
+  margin-bottom: 9.7rem;
+}
