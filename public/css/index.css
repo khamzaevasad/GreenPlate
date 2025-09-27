@@ -1,5 +1,456 @@
 @import "./main.css";
 
-.heading {
-  background-color: var(--neutral-900);
+/* =======================
+   HERO SECTION STYLES
+======================= */
+
+.main {
+  margin-top: 9rem;
+  margin-bottom: 8rem;
+}
+
+.hero-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 7.2rem;
+  color: var(--neutral-900);
+}
+
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 7.2rem;
+}
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.4em;
+  background: #ffd6c9;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero-subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-900);
+}
+
+/* BUTTON STYLES */
+.exploring-btn {
+  background: var(--neutral-900);
+  font-size: 2rem;
+  color: white;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  transition: 0.3s ease;
+}
+
+.exploring-btn:hover {
+  background: var(--neutral-600);
+}
+
+/* HERO IMAGE CONTAINER */
+.hero-img-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/pattern-squiggle-1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.img-hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-img {
+  border-radius: 20px;
+  border: solid 7px white;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =======================
+   CARD SECTION STYLES
+======================= */
+
+.card-main-title {
+  font-weight: 800;
+  font-size: 4.8rem;
+  color: var(--neutral-900);
+  line-height: 120%;
+  text-align: center;
+}
+
+.hero-cards {
+  margin-top: 9.6rem;
+}
+
+.card-container {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.card-title {
+  color: var(--neutral-900);
+  font-size: 3.2rem;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 2rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--neutral-900);
+}
+
+/* =======================
+   RESPONSIVE STYLES
+======================= */
+
+/* Desktop & Large Screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .mobile-subtitle {
+    margin-top: 1.6rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--neutral-900);
+    display: block;
+  }
+
+  .hero-subtitle {
+    display: none;
+  }
+
+  .hero-img-container {
+    padding: 1.5rem;
+  }
+
+  .hero-img {
+    max-width: 90%;
+    width: auto;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+  .hero-items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero-title,
+  .highlight-text {
+    font-size: 6.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-title,
+  .highlight-text {
+    font-size: 5.2rem;
+  }
+
+  .mobile-subtitle {
+    margin-top: 1.6rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--neutral-900);
+    display: block;
+  }
+
+  .hero-subtitle {
+    display: none;
+  }
+
+  .hero-img-container {
+    padding: 1rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 345px;
+    height: auto;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+@import "./main.css";
+
+/* =======================
+   HERO SECTION STYLES
+======================= */
+
+.main {
+  margin-top: 9rem;
+  margin-bottom: 8rem;
+}
+
+.hero-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 7.2rem;
+  color: var(--neutral-900);
+}
+
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 7.2rem;
+}
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.4em;
+  background: #ffd6c9;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hero-subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-900);
+}
+
+/* BUTTON STYLES */
+.exploring-btn {
+  background: var(--neutral-900);
+  font-size: 2rem;
+  color: white;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  transition: 0.3s ease;
+}
+
+.exploring-btn:hover {
+  background: var(--neutral-600);
+}
+
+/* HERO IMAGE CONTAINER */
+.hero-img-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/pattern-squiggle-1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.img-hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-img {
+  border-radius: 20px;
+  border: solid 7px white;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =======================
+   CARD SECTION STYLES
+======================= */
+
+.card-main-title {
+  font-weight: 800;
+  font-size: 4.8rem;
+  color: var(--neutral-900);
+  line-height: 120%;
+  text-align: center;
+}
+
+.hero-cards {
+  margin-top: 9.6rem;
+}
+
+.card-container {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.card-title {
+  color: var(--neutral-900);
+  font-size: 3.2rem;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 2rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--neutral-900);
+}
+
+/* =======================
+   RESPONSIVE STYLES
+======================= */
+
+/* Desktop & Large Screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .mobile-subtitle {
+    margin-top: 1.6rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--neutral-900);
+    display: block;
+  }
+
+  .hero-subtitle {
+    display: none;
+  }
+
+  .hero-img-container {
+    padding: 1.5rem;
+  }
+
+  .hero-img {
+    max-width: 90%;
+    width: auto;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+  .hero-items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero-title,
+  .highlight-text {
+    font-size: 6.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-title,
+  .highlight-text {
+    font-size: 5.2rem;
+  }
+
+  .mobile-subtitle {
+    margin-top: 1.6rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--neutral-900);
+    display: block;
+  }
+
+  .hero-subtitle {
+    display: none;
+  }
+
+  .hero-img-container {
+    padding: 1rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 345px;
+    height: auto;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
 }
