@@ -42,7 +42,6 @@ app.get("/about.ejs", (req, res) => {
         console.log(err);
         res.end("Something Went Wrong");
       } else {
-        console.log(data);
         res.render("about", { item: data });
       }
     });
