@@ -1,30 +1,27 @@
-console.log("start server");
-
-const express = require("express");
-const app = express();
 const http = require("http");
-const { json } = require("stream/consumers");
+const mongodb = require("mongodb");
+const connectionString =
+  "mongodb+srv://Khamzaevasad:Sb3PmKbyvrzKwLlN@cluster0.7usnmhb.mongodb.net/Recipe?retryWrites=true&w=majority&appName=Cluster0";
 
-// 1: entered codes
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// 2: sesion codes
-
-// 3: view codes
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// 4: routing codes
-
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-const server = http.createServer(app);
-let PORT = 3200;
-
-server.listen(PORT, () => {
-  console.log(`Server is running successfuly on http://localhost:${PORT}`);
-});
+mongodb.connect(
+  connectionString,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) console.log("ERROR on Connection MongoDB");
+    else {
+      console.log("MongoDB connection Succed");
+      module.exports = client;
+      const app = require("./app");
+      const server = http.createServer(app);
+      let PORT = 3200;
+      server.listen(PORT, () => {
+        console.log(
+          `Server is running successfuly on http://localhost:${PORT}`
+        );
+      });
+    }
+  }
+);

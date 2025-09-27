@@ -21,7 +21,8 @@
   "homepage": "https://github.com/khamzaevasad/recipe#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongodb": "^3.2.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
