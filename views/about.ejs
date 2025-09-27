@@ -135,6 +135,45 @@
           </div>
         </div>
       </section>
+      <div class="line container"></div>
+      <!-- Beyond the plate -->
+      <section class="container">
+        <div class="beyond-container">
+          <div class="beyond-items">
+            <h3 class="beyond-title"><%= item[0].beyond_the_plate.title%></h3>
+            <p class="beyond-subtitle">
+              <%= item[0].beyond_the_plate.description%>
+            </p>
+            <div class="beyond-detail">
+              <div class="beyond-list">
+                <span class="beyond-icon"></span>
+                <span class="beyond-subtitle"
+                  ><%= item[0].beyond_the_plate.goals[0]%></span
+                >
+              </div>
+              <div class="beyond-list">
+                <span class="beyond-icon"></span>
+                <span class="beyond-subtitle"
+                  ><%= item[0].beyond_the_plate.goals[1]%></span
+                >
+              </div>
+              <div class="beyond-list">
+                <span class="beyond-icon"></span>
+                <span class="beyond-subtitle"
+                  ><%= item[0].beyond_the_plate.goals[2]%></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="beyond-img-wrapper">
+            <img
+              class="beyond-img"
+              src="/images/image-about-beyond-the-plate-large.webp"
+              alt="beyond-img"
+            />
+          </div>
+        </div>
+      </section>
 
       <!-- ready -->
       <section class="container ready-container">
