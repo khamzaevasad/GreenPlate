@@ -100,57 +100,22 @@
       <section class="container hero-cards">
         <h3 class="card-main-title">What you’ll get</h3>
         <div class="card-container">
+          <% items.map((item) => { %>
           <div class="card">
             <!-- img -->
             <div>
-              <img src="/images/carrot.svg" alt="carrot" />
+              <img src="<%=item.img%>" alt="carrot" />
             </div>
             <!-- title -->
             <div>
-              <p class="card-title">Whole-food recipes</p>
+              <p class="card-title"><%=item.title%></p>
             </div>
             <!-- subtitle -->
             <div>
-              <p class="card-subtitle">
-                Each dish uses everyday, unprocessed ingredients.
-              </p>
+              <p class="card-subtitle"><%=item.description%></p>
             </div>
           </div>
-
-          <div class="card">
-            <!-- img -->
-            <div>
-              <img src="/images/feature2.svg" alt="feature" />
-            </div>
-            <!-- title -->
-            <div>
-              <p class="card-title">Minimum fuss</p>
-            </div>
-            <!-- subtitle -->
-            <div>
-              <p class="card-subtitle">
-                All recipes are designed to make eating healthy quick and easy.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <!-- img -->
-            <div>
-              <img src="/images/feature.svg" alt="search" />
-            </div>
-            <!-- title -->
-            <div>
-              <p class="card-title">Search in seconds</p>
-            </div>
-            <!-- subtitle -->
-            <div>
-              <p class="card-subtitle">
-                Filter by name or ingredient and jump straight to the recipe you
-                need.
-              </p>
-            </div>
-          </div>
+          <% }) %>
         </div>
       </section>
       <div class="line container"></div>
@@ -202,6 +167,7 @@
         </div>
       </div>
     </footer>
+
     <!-- footer end -->
 
     <script type="module" src="/js/index.js"></script>

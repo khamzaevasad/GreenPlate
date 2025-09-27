@@ -19,7 +19,17 @@ app.set("view engine", "ejs");
 // 4: routing codes
 
 app.get("/", (req, res) => {
-  res.render("index");
+  db.collection("cards")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Something Went Wrong");
+      } else {
+        // console.log(data);
+        res.render("index", { items: data });
+      }
+    });
 });
 
 module.exports = app;
