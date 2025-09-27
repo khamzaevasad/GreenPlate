@@ -65,85 +65,77 @@
 
     <!-- main start -->
     <main class="main">
-      <section class="hero-img-container">
-        <!-- hero section -->
-        <div class="container">
-          <!-- hero items -->
-          <div class="hero-container">
-            <div class="hero-items">
-              <h2 class="hero-title">
-                <span class="highlight-text">Healthy</span> meals zero fuss
-              </h2>
-              <p class="hero-subtitle">
-                Discover eight quick, whole-food recipes that you can cook
-                tonight
-              </p>
-              <p class="hero-subtitle">—no processed junk, no guesswork.</p>
-              <div class="mobile-subtitle hidden">
-                Discover eight quick, whole-food recipes that you can cook
-                tonight —no processed junk, no guesswork.
-              </div>
-              <a class="btn exploring-btn" href="#">Start exploring</a>
-            </div>
-            <!-- hero img -->
-            <div class="img-hero-container">
-              <img
-                class="hero-img"
-                src="/images/image-home-hero-large.webp"
-                alt="hero-img"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="line container"></div>
-      <!-- what youl get -->
-      <section class="container hero-cards">
-        <h3 class="card-main-title">What you’ll get</h3>
-        <div class="card-container">
-          <% items.map((item) => { %>
-          <div class="card">
-            <!-- img -->
-            <div>
-              <img src="<%=item.img%>" alt="carrot" />
-            </div>
-            <!-- title -->
-            <div>
-              <p class="card-title"><%=item.title%></p>
-            </div>
-            <!-- subtitle -->
-            <div>
-              <p class="card-subtitle"><%=item.description%></p>
-            </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
-      <div class="line container"></div>
-      <!-- built -->
+      <!-- mission -->
       <section class="container">
-        <div class="built-container">
-          <div class="built-items">
-            <h3 class="built-title">Built for real life</h3>
-            <p class="built-subtitle built-subtitle-top">
-              Cooking shouldn’t be complicated. These recipes come in under
-              <span class="highlight-subtitle">30 minutes </span> of active
-              time, fit busy schedules, and taste good enough to repeat.
-            </p>
-            <p class="built-subtitle">
-              Whether you’re new to the kitchen or just need fresh ideas, we’ve
-              got you covered.
-            </p>
+        <div class="mission-container">
+          <div class="mission-items">
+            <p class="mission-header-title">Our mission</p>
+            <h3 class="mission-title"><%= item[0].mission.title%></h3>
+            <div class="detail-info">
+              <p class="mission-subtitle"><%=item[0].mission.description%></p>
+              <p class="mission-subtitle"><%=item[0].mission.details%></p>
+            </div>
           </div>
-          <div class="built-img">
+          <div class="mission-img-wrapper">
             <img
-              class="built-img"
-              src="/images/image-home-real-life-large.webp"
-              alt="built-img"
+              class="mission-img"
+              src="/images/image-about-our-mission-large.webp"
+              alt="mission-img"
             />
           </div>
         </div>
       </section>
+      <div class="line container"></div>
+      <!-- why we exist -->
+      <section class="container">
+        <div class="exist-container">
+          <div class="exist-left-wrapper">
+            <h3 class="exist-left-title">Why we exist</h3>
+          </div>
+          <div class="list-container">
+            <% item.forEach(function(el) { %> <%
+            el.why_we_exist.forEach(function(why) { %>
+            <div class="list">
+              <div class="list-header">
+                <span class="point-icon">
+                  <img src="/images/icon-bullet-point.svg" alt="point-icon" />
+                </span>
+                <span class="header-title"><%= why.title %></span>
+              </div>
+              <div class="list-body">
+                <p class="list-subtitle"><%= why.description %></p>
+              </div>
+            </div>
+            <% }); %> <% }); %>
+          </div>
+        </div>
+      </section>
+      <div class="line container"></div>
+      <!-- philosopy -->
+      <section class="container">
+        <div class="exist-container">
+          <div class="exist-left-wrapper">
+            <h3 class="exist-left-title">Our food philosophy</h3>
+          </div>
+          <div class="list-container">
+            <% item.forEach(function(el) { %> <%
+            el.food_philosophy.forEach(function(why) { %>
+            <div class="list">
+              <div class="list-header">
+                <span class="point-icon">
+                  <img src="/images/icon-bullet-point.svg" alt="point-icon" />
+                </span>
+                <span class="header-title"><%= why.title %></span>
+              </div>
+              <div class="list-body">
+                <p class="list-subtitle"><%= why.description %></p>
+              </div>
+            </div>
+            <% }); %> <% }); %>
+          </div>
+        </div>
+      </section>
+
       <!-- ready -->
       <section class="container ready-container">
         <div class="ready-items">
