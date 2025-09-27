@@ -38,6 +38,7 @@ body {
   height: 100%;
   font-family: "Inter";
   background: var(--neutral-100);
+  padding-top: 3.2rem;
 }
 
 main {
@@ -50,9 +51,9 @@ h1 {
 
 .container {
   width: 100%;
-  max-width: 1292px; /* o'zgaruvchan */
-  padding-left: 5rem;
-  padding-right: 5rem;
+  max-width: 1192px; /* o'zgaruvchan */
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -60,7 +61,7 @@ h1 {
 .btn {
   padding: 1.6rem 3.2rem;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--neutral-0);
   cursor: pointer;
   line-height: 140%;
@@ -71,10 +72,14 @@ h1 {
 .btn-xs {
   padding: 1.2rem 1.6rem;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--neutral-0);
   cursor: pointer;
   line-height: 140%;
   font-size: 2rem;
   border: none;
+}
+
+.hidden {
+  display: none;
 }
