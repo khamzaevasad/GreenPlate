@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.1rem;
+  margin-top: 4.1rem;
+}
+.footer-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--neutral-900);
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.footer-container img {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+  }
+}
