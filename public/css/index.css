@@ -1,415 +1,88 @@
 @import "./main.css";
 
 /* =======================
-   HERO SECTION STYLES
+   SHARED STYLES
 ======================= */
 
-.main {
-  margin-top: 9rem;
-  margin-bottom: 8rem;
-}
-
-.hero-items {
+.hero-items,
+.img-hero-container,
+.card,
+.built-items,
+.ready-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.2rem;
 }
 
-.hero-title {
+.hero-items,
+.img-hero-container,
+.ready-items {
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title,
+.highlight-text,
+.card-main-title,
+.built-title,
+.ready-title {
   font-weight: 800;
-  font-size: 7.2rem;
   color: var(--neutral-900);
 }
 
-.highlight-text {
-  position: relative;
-  display: inline-block;
-  font-weight: 800;
-  font-size: 7.2rem;
-}
-
-.highlight-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0.1em;
-  width: 100%;
-  height: 0.4em;
-  background: #ffd6c9;
-  z-index: -1;
-  border-radius: 4px;
-}
-
-.hero-subtitle {
+.hero-subtitle,
+.card-subtitle,
+.built-subtitle,
+.ready-subtitle,
+.mobile-subtitle {
   font-weight: 400;
   font-size: 2rem;
   line-height: 150%;
-  margin-bottom: 0.5rem;
   color: var(--neutral-900);
 }
 
-/* BUTTON STYLES */
-.exploring-btn {
+.exploring-btn,
+.ready-btn {
   background: var(--neutral-900);
   font-size: 2rem;
   color: white;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   transition: 0.3s ease;
 }
 
-.exploring-btn:hover {
+.exploring-btn:hover,
+.ready-btn:hover {
   background: var(--neutral-600);
 }
 
-/* HERO IMAGE CONTAINER */
-.hero-img-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/pattern-squiggle-1.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-.img-hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-img {
-  border-radius: 20px;
-  border: solid 7px white;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-}
-
-/* =======================
-   CARD SECTION STYLES
-======================= */
-
-.card-main-title {
-  font-weight: 800;
-  font-size: 4.8rem;
-  color: var(--neutral-900);
-  line-height: 120%;
-  text-align: center;
-}
-
-.hero-cards {
-  margin-top: 9.6rem;
-}
-
+.built-container,
 .card-container {
-  margin-top: 4.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3.2rem;
 }
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 100%;
-}
-
-.card-title {
-  color: var(--neutral-900);
-  font-size: 3.2rem;
-  line-height: 130%;
-  font-weight: 600;
-}
-
-.card-subtitle {
-  font-size: 2rem;
-  line-height: 150%;
-  font-weight: 400;
-  color: var(--neutral-900);
-}
-
-/* =======================
-   RESPONSIVE STYLES
-======================= */
-
-/* Desktop & Large Screens */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .mobile-subtitle {
-    margin-top: 1.6rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 150%;
-    color: var(--neutral-900);
-    display: block;
-  }
-
-  .hero-subtitle {
-    display: none;
-  }
-
-  .hero-img-container {
-    padding: 1.5rem;
-  }
-
-  .hero-img {
-    max-width: 90%;
-    width: auto;
-  }
-
-  .card-container {
-    flex-direction: column;
-  }
-}
-
-/* Tablet & Mobile */
-@media (max-width: 900px) {
-  .hero-items {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .hero-title,
-  .highlight-text {
-    font-size: 6.4rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-title,
-  .highlight-text {
-    font-size: 5.2rem;
-  }
-
-  .mobile-subtitle {
-    margin-top: 1.6rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 150%;
-    color: var(--neutral-900);
-    display: block;
-  }
-
-  .hero-subtitle {
-    display: none;
-  }
-
-  .hero-img-container {
-    padding: 1rem;
-  }
-
-  .hero-img {
-    width: 100%;
-    max-width: 345px;
-    height: auto;
-  }
-
-  .card-container {
-    flex-direction: column;
-  }
-}
-@import "./main.css";
 
 /* =======================
    HERO SECTION STYLES
 ======================= */
 
 .main {
-  margin-top: 9rem;
-  margin-bottom: 8rem;
+  margin: 9rem 0 8rem 0;
 }
 
 .hero-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 1.2rem;
 }
 
-.hero-title {
-  font-weight: 800;
+.hero-title,
+.highlight-text {
   font-size: 7.2rem;
-  color: var(--neutral-900);
 }
 
 .highlight-text {
   position: relative;
   display: inline-block;
-  font-weight: 800;
-  font-size: 7.2rem;
 }
 
-.highlight-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0.1em;
-  width: 100%;
-  height: 0.4em;
-  background: #ffd6c9;
-  z-index: -1;
-  border-radius: 4px;
-}
-
-.hero-subtitle {
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 150%;
-  margin-bottom: 0.5rem;
-  color: var(--neutral-900);
-}
-
-/* BUTTON STYLES */
-.exploring-btn {
-  background: var(--neutral-900);
-  font-size: 2rem;
-  color: white;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  transition: 0.3s ease;
-}
-
-.exploring-btn:hover {
-  background: var(--neutral-600);
-}
-
-/* HERO IMAGE CONTAINER */
-.hero-img-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/pattern-squiggle-1.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-.img-hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-img {
-  border-radius: 20px;
-  border: solid 7px white;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-}
-
-/* =======================
-   CARD SECTION STYLES
-======================= */
-
-.card-main-title {
-  font-weight: 800;
-  font-size: 4.8rem;
-  color: var(--neutral-900);
-  line-height: 120%;
-  text-align: center;
-}
-
-.hero-cards {
-  margin-top: 9.6rem;
-}
-
-.card-container {
-  margin-top: 4.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3.2rem;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 100%;
-}
-
-.card-title {
-  color: var(--neutral-900);
-  font-size: 3.2rem;
-  line-height: 130%;
-  font-weight: 600;
-}
-
-.card-subtitle {
-  font-size: 2rem;
-  line-height: 150%;
-  font-weight: 400;
-  color: var(--neutral-900);
-}
-
-/* =======================
-   BUILT STYLES
-======================= */
-
-.built-container {
-  margin-top: 8.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.built-items {
-  margin-right: 4.8rem;
-  display: flex;
-  flex-direction: column;
-  color: var(--neutral-900);
-}
-.built-title {
-  font-weight: 800;
-  font-size: 4.8rem;
-  line-height: 100%;
-  letter-spacing: -3%;
-  margin-bottom: 2rem;
-}
-.built-subtitle {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: -0.4px;
-}
-.built-subtitle-top {
-  margin-bottom: 2rem;
-}
-
-.highlight-subtitle {
-  position: relative;
-  display: inline-block;
-  font-weight: 400;
-  font-size: 2rem;
-}
-
+.highlight-text::after,
 .highlight-subtitle::after {
   content: "";
   position: absolute;
@@ -421,13 +94,118 @@
   z-index: -1;
   border-radius: 4px;
 }
+
+.hero-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.exploring-btn {
+  margin: 4rem 0;
+}
+
+.hero-img-container {
+  position: relative;
+  background-image: url("../images/pattern-squiggle-1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.img-hero-container {
+  width: 100%;
+}
+
+.hero-img {
+  border-radius: 20px;
+  border: solid 7px white;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =======================
+   CARD SECTION STYLES
+======================= */
+
+.card-main-title {
+  font-size: 4.8rem;
+  line-height: 120%;
+  text-align: center;
+}
+
+.hero-cards {
+  margin-top: 9.6rem;
+}
+
+.card-container {
+  margin-top: 4.8rem;
+  gap: 3.2rem;
+}
+
+.card {
+  align-items: start;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.card-title {
+  color: var(--neutral-900);
+  font-size: 3.2rem;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+/* =======================
+   BUILT SECTION STYLES
+======================= */
+
+.built-container {
+  margin-top: 8.5rem;
+  justify-content: space-between;
+}
+
+.built-items {
+  margin-right: 4.8rem;
+  color: var(--neutral-900);
+}
+
+.built-title,
+.ready-title {
+  font-size: 4.8rem;
+  line-height: 100%;
+  letter-spacing: -3%;
+}
+
+.built-title {
+  margin-bottom: 2rem;
+}
+
+.built-subtitle {
+  letter-spacing: -0.4px;
+}
+
+.built-subtitle-top {
+  margin-bottom: 2rem;
+}
+
+.highlight-subtitle {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 .built-img {
   border-radius: 12px;
   width: 100%;
   max-width: 700px;
 }
+
 /* =======================
-   READY STYLES
+   READY SECTION STYLES
 ======================= */
 
 .ready-container {
@@ -467,48 +245,25 @@
 }
 
 .ready-items {
-  color: var(--neutral-900);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.2rem;
   z-index: 100;
 }
-.ready-title {
-  font-weight: 800;
-  font-size: 4.8rem;
-  line-height: 100%;
-  letter-spacing: -0.3%;
-}
+
 .ready-subtitle {
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 150%;
   letter-spacing: -0.4px;
 }
 
 .ready-btn {
   margin-top: 4rem;
-  background: var(--neutral-900);
-  transition: 0.3s ease;
-}
-.ready-btn:hover {
-  background: var(--neutral-600);
 }
 
 /* =======================
    RESPONSIVE STYLES
 ======================= */
 
-/* Desktop & Large Screens */
 @media (max-width: 1024px) and (min-width: 768px) {
   .mobile-subtitle {
     margin-top: 1.6rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 150%;
-    color: var(--neutral-900);
     display: block;
   }
 
@@ -525,28 +280,22 @@
     width: auto;
   }
 
-  .card-container {
+  .card-container,
+  .built-container {
     flex-direction: column;
   }
 
-  .built-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .built-items {
     margin-left: 0;
   }
+
   .built-img {
     margin-top: 2.8rem;
   }
 }
 
-/* Tablet & Mobile */
 @media (max-width: 900px) {
   .hero-items {
-    display: flex;
-    flex-direction: column;
     align-items: start;
   }
 
@@ -558,22 +307,20 @@
   .hero-subtitle {
     font-size: 1.9rem;
   }
+
   .built-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
+
   .built-items {
     margin-left: 0;
   }
+
   .built-img {
     margin-top: 2.8rem;
   }
 
   .ready-container::after {
-    background-image: url("../images/pattern-knife.svg");
-    width: 250px;
-    height: 350px;
     top: -120px;
     right: -50px;
   }
@@ -588,49 +335,7 @@
   .ready-container {
     padding: 4.8rem 2.4rem;
   }
-}
-
-/* @media (max-width: 767px) {
-  .hero-title,
-  .highlight-text {
-    font-size: 5.2rem;
-  }
-
-  .mobile-subtitle {
-    margin-top: 1.6rem;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 150%;
-    color: var(--neutral-900);
-    display: block;
-  }
-
-  .hero-subtitle {
-    display: none;
-  }
-
-  .hero-img-container {
-    padding: 1rem;
-  }
-
-  .hero-img {
-    width: 100%;
-    max-width: 345px;
-    height: auto;
-  }
-
   .card-container {
     flex-direction: column;
   }
-  .built-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .built-items {
-    margin-left: 0;
-  }
-  .built-img {
-    margin-top: 2.8rem;
-  }
-} */
+}

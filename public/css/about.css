@@ -1,77 +1,102 @@
 /* =======================
-   MISSION SECTION STYLES
+   SHARED STYLES
 ======================= */
 
-.mission-container {
+.mission-container,
+.exist-container,
+.beyond-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
 }
-.mission-items {
-  color: var(--neutral-900);
+
+.mission-container,
+.beyond-container {
+  align-items: center;
+}
+
+.mission-container {
+  margin: 8rem 0;
+}
+
+.exist-container {
+  align-items: flex-start;
+}
+
+.mission-items,
+.exist-left-wrapper,
+.beyond-items {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 2.4rem;
-  justify-content: center;
-  margin-right: 6.4rem;
-  width: 100%;
-  max-width: 510px;
 }
+
+.mission-items,
+.beyond-items {
+  gap: 2rem;
+  max-width: 376px;
+  width: 100%;
+}
+
+.mission-items {
+  gap: 2.4rem;
+  max-width: 510px;
+  margin-right: 6.4rem;
+  align-items: start;
+  justify-content: center;
+  color: var(--neutral-900);
+}
+
+.mission-title,
+.exist-left-title,
+.beyond-title {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 120%;
+  letter-spacing: -2px;
+  color: var(--neutral-900);
+}
+
+.mission-subtitle,
+.list-subtitle,
+.beyond-subtitle {
+  color: #395852;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+}
+
+.mission-img,
+.beyond-img {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* =======================
+   SPECIFIC STYLES
+======================= */
+
 .mission-header-title {
   background: var(--orange-500);
   font-size: 2rem;
   line-height: 140%;
   letter-spacing: 0.5px;
-  font-weight: 500;
   font-weight: bold;
   padding: 2px;
   border-radius: 5px;
 }
-.mission-title {
-  font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 120%;
-  letter-spacing: -2px;
-}
 
 .mission-subtitle {
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 150%;
-  letter-spacing: -0.4px;
   margin-bottom: 1.6rem;
-  color: #395852;
 }
 
 .mission-img {
-  border-radius: 12px;
   max-width: 618px;
-  object-fit: cover;
-  width: 100%;
 }
 
-/* =======================
-   WHY WE EXIST STYLES
-======================= */
-
-.exist-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 .exist-left-wrapper {
   max-width: 372px;
   width: 100%;
-}
-.exist-left-title {
-  color: var(--neutral-900);
-  font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 120%;
-  letter-spacing: -2px;
 }
 
 .list-container {
@@ -79,19 +104,23 @@
   flex-direction: column;
   gap: 4.8rem;
 }
+
 .list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: self-start;
 }
+
 .point-icon {
   margin-left: -3rem;
 }
+
 .list-header {
   display: flex;
   align-items: center;
 }
+
 .header-title {
   margin-left: 2rem;
   font-size: 2.4rem;
@@ -102,55 +131,71 @@
 }
 
 .list-subtitle {
-  margin-top: 1.2rem;
-  margin-left: 2rem;
-  color: #395852;
-  font-size: 2rem;
-  line-height: 150%;
-  letter-spacing: -0.4px;
-  font-weight: 400;
+  margin: 1.2rem 0 0 2rem;
+}
+
+.beyond-items {
+  margin-right: 6.4rem;
+}
+
+.beyond-icon {
+  display: inline-block;
+  background: #395852;
+  border-radius: 50px;
+  width: 14px;
+  height: 14px;
+  margin-right: 1.2rem;
+}
+
+.beyond-img {
+  max-width: 744px;
 }
 
 /* =======================
    RESPONSIVE STYLES
 ======================= */
 
-/* Tablet & Mobile */
 @media (max-width: 900px) {
-  .mission-container {
+  .mission-container,
+  .exist-container,
+  .beyond-container {
     justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
+
   .mission-items {
-    margin: 0;
-    justify-content: center;
+    margin: 0 0 6.4rem 0;
     align-items: start;
-    /* width: 100%; */
-    width: 704px;
-    max-width: 100%;
-    margin-bottom: 6.4rem;
-  }
-  .mission-img {
     width: 704px;
     max-width: 100%;
   }
 
+  .mission-img,
   .exist-container {
-    justify-content: center;
-    flex-direction: column;
     width: 704px;
     max-width: 100%;
   }
+
   .exist-left-wrapper {
     width: 100%;
     margin-bottom: 4rem;
   }
+
   .point-icon {
     margin: 0;
   }
+
   .list-subtitle {
     margin-left: 5rem;
+  }
+
+  .beyond-items {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .beyond-img {
+    margin-top: 3.2rem;
   }
 }
 
