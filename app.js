@@ -18,7 +18,8 @@ app.set("view engine", "ejs");
 
 // 4: routing codes
 
-app.get("/", (req, res) => {
+// home
+app.get(["/", "/index.ejs"], (req, res) => {
   db.collection("cards")
     .find()
     .toArray((err, data) => {
@@ -30,6 +31,26 @@ app.get("/", (req, res) => {
         res.render("index", { items: data });
       }
     });
+});
+
+// about
+app.get("/about.ejs", (req, res) => {
+  db.collection("about")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Something Went Wrong");
+      } else {
+        console.log(data);
+        res.render("about", { item: data });
+      }
+    });
+});
+
+// resipes
+app.get("/recipes.ejs", (req, res) => {
+  res.render("recipes");
 });
 
 module.exports = app;

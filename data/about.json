@@ -1,0 +1,50 @@
+[
+  {
+    "mission": {
+      "title": "Help more people cook nourishing meals, more often.",
+      "description": "Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.",
+      "details": "We showcase quick, whole-food dishes that anyone can master—no fancy equipment, no ultra-processed shortcuts—just honest ingredients and straightforward steps."
+    },
+    "why_we_exist": [
+      {
+        "title": "Cut through the noise.",
+        "description": "The internet is bursting with recipes, yet most busy cooks still default to take-away or packaged foods. We curate a tight collection of fool-proof dishes so you can skip the scrolling and start cooking."
+      },
+      {
+        "title": "Empower home kitchens.",
+        "description": "When you control what goes into your meals, you control how you feel. Every recipe is built around unrefined ingredients and ready in about half an hour of active prep."
+      },
+      {
+        "title": "Make healthy look good.",
+        "description": "High-resolution imagery shows you exactly what success looks like—because we eat with our eyes first, and confidence matters."
+      }
+    ],
+    "food_philosophy": [
+      {
+        "title": "Whole ingredients first.",
+        "description": "Fresh produce, grains, legumes, herbs, and quality fats form the backbone of every recipe."
+      },
+      {
+        "title": "Flavor without compromise.",
+        "description": "Spices, citrus, and natural sweetness replace excess salt, sugar, and additives."
+      },
+      {
+        "title": "Respect for time.",
+        "description": "Weeknight meals should slot into real schedules; weekend cooking can be leisurely but never wasteful."
+      },
+      {
+        "title": "Sustainable choices.",
+        "description": "Short ingredient lists cut down on food waste and carbon footprint, while plant-forward dishes keep things planet-friendly."
+      }
+    ],
+    "beyond_the_plate": {
+      "title": "Beyond the plate",
+      "description": "We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:",
+      "goals": [
+        "Encourage family dinners and social cooking.",
+        "Reduce reliance on single-use packaging and delivery waste.",
+        "Spark curiosity about seasonal produce and local agriculture."
+      ]
+    }
+  }
+]
