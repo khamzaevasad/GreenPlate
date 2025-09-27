@@ -64,7 +64,71 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main class="main"></main>
+    <main class="main">
+      <!-- healthy recipes -->
+      <section class="container">
+        <div class="healthy-container">
+          <h3 class="healthy-title">Explore our simple, healthy recipes</h3>
+          <p class="healthy-subtitle">
+            Discover eight quick, whole-food dishes that fit real-life schedules
+            and taste amazing. Use the search bar to find a recipe by name or
+            ingredient, or simply scroll the list and let something delicious
+            catch your eye.
+          </p>
+        </div>
+      </section>
+
+      <!-- filter -->
+      <section class="container">
+        <form class="filter-container">
+          <div class="left-selects">
+            <div class="select-wrapper">
+              <select name="prepTime" id="prepTime">
+                <option value="">Max Prep Time</option>
+                <option value="15">0 minutes</option>
+                <option value="30">5 minutes</option>
+                <option value="45">10 minutes</option>
+                <option value="">clear</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select name="cookTime" id="cookTime">
+                <option value="">Max Cook Time</option>
+                <option value="15">0 minutes</option>
+                <option value="30">5 minutes</option>
+                <option value="45">10 minutes</option>
+                <option value="60">15 minutes</option>
+                <option value="120">20 minutes</option>
+                <option value="">clear</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <svg
+              class="search-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+            <input
+              type="text"
+              placeholder="Search by name or ingredient..."
+              name="search"
+              id="search"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
     <!-- main end -->
 
     <!-- footer start -->
