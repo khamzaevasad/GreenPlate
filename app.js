@@ -1,7 +1,7 @@
 console.log("start server");
 const express = require("express");
 const app = express();
-const db = require("./server").db();
+const db = require("./server");
 
 // MongoDB
 

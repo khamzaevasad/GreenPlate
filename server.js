@@ -12,15 +12,14 @@ mongodb.connect(
   (err, client) => {
     if (err) console.log("ERROR on Connection MongoDB");
     else {
-      console.log("MongoDB connection Succed");
-      module.exports = client;
+      console.log("✅ MongoDB connection successful");
+      db = client.db();
+      module.exports = db;
       const app = require("./app");
       const server = http.createServer(app);
       let PORT = 3200;
       server.listen(PORT, () => {
-        console.log(
-          `Server is running successfuly on http://localhost:${PORT}`
-        );
+        console.log(`🚀 Server running on http://localhost:${PORT}`);
       });
     }
   }
