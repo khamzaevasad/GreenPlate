@@ -177,6 +177,11 @@
   letter-spacing: -0.5px;
   color: var(--neutral-900);
   margin-bottom: 1rem;
+  display: inline-block;
+  width: 344px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .card-description,
 .detail-subtitle {
@@ -185,6 +190,10 @@
   color: #395852;
   line-height: 150%;
   letter-spacing: 0.3px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* faqat 2 qator ko‘rsatadi */
+  overflow: hidden;
 }
 
 .card-detail {
