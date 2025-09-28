@@ -49,7 +49,16 @@ app.get("/about.ejs", (req, res) => {
 
 // resipes
 app.get("/recipes.ejs", (req, res) => {
-  res.render("recipes");
+  db.collection("recipes")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Something went wrong");
+      } else {
+        res.render("recipes", { items: data });
+      }
+    });
 });
 
 module.exports = app;
