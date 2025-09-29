@@ -32,3 +32,22 @@ searchInput.addEventListener("input", () => {
     }
   });
 });
+
+// // cookTime
+// const cookTime = document.getElementById("cookTime");
+
+// // preptime
+// const prepTime = document.getElementById("prepTime");
+
+// prepTime.addEventListener("change", (e) => {
+//   console.log(e.target.value == "");
+// });
+
+const select = document.querySelectorAll("select").forEach((item) => {
+  item.addEventListener("change", (e) => {
+    if (!e.target.value) {
+      console.log("not value");
+    } else if (e.target.value) {
+    }
+  });
+});
