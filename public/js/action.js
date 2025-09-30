@@ -33,21 +33,31 @@ searchInput.addEventListener("input", () => {
   });
 });
 
-// // cookTime
-// const cookTime = document.getElementById("cookTime");
+// prep-time && cook-time
+const prepTime = document.querySelectorAll(".prep-time");
+const cookTime = document.querySelectorAll(".cook-time");
 
-// // preptime
-// const prepTime = document.getElementById("prepTime");
+// preptime filter
+const prepTimeEl = document.getElementById("prepTime");
 
-// prepTime.addEventListener("change", (e) => {
-//   console.log(e.target.value == "");
-// });
+prepTimeEl.addEventListener("change", (e) => {
+  prepTime.forEach((item) => {
+    if (item.textContent == e.target.value || !e.target.value) {
+      item.closest(".card").style.display = "flex";
+    } else {
+      item.closest(".card").style.display = "none";
+    }
+  });
+});
 
-const select = document.querySelectorAll("select").forEach((item) => {
-  item.addEventListener("change", (e) => {
-    if (!e.target.value) {
-      console.log("not value");
-    } else if (e.target.value) {
+// cookTime filter
+const cookTimeEl = document.getElementById("cookTime");
+cookTimeEl.addEventListener("change", (e) => {
+  cookTime.forEach((item) => {
+    if (item.textContent == e.target.value || !e.target.value) {
+      item.closest(".card").style.display = "flex";
+    } else {
+      item.closest(".card").style.display = "none";
     }
   });
 });

@@ -1,134 +1,118 @@
 /* =======================
-   HEALTHY STYLES
+   HEALTHY
 ======================= */
-
 .healthy-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-left: 19rem;
-  padding-right: 19rem;
+  padding: 0 19rem;
+  margin: 8rem 0 6.4rem;
   text-align: center;
   gap: 1.2rem;
-  margin-top: 8rem;
-  margin-bottom: 6.4rem;
 }
 .healthy-title {
-  font-weight: 700;
   font-size: 4.8rem;
+  font-weight: 700;
   line-height: 120%;
   letter-spacing: -2px;
   color: var(--neutral-900);
 }
 .healthy-subtitle {
-  color: #395852;
   font-size: 2rem;
+  font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.4px;
-  font-weight: 400;
+  color: #395852;
 }
 
 /* =======================
-   FILTER STYLES
+   FILTER
 ======================= */
-
 .left-selects {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .filter-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
   border-radius: 8px;
-  justify-content: space-between;
 }
-
 .select-wrapper {
   position: relative;
 }
-
 .select-wrapper select {
   appearance: none;
-  background: white;
+  width: 100%;
+  min-width: 184px;
+  padding: 0.9rem 2.5rem 0.9rem 1rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: #374151;
+  background: #fff;
   border: 1px solid #e1e5e9;
   border-radius: 6px;
-  padding: 0.9rem 2.5rem 0.9rem 1rem; /* biroz kattaroq */
-  font-size: 1.8rem; /* 14px o‘rniga 16px */
-  color: #374151;
   cursor: pointer;
-  min-width: 184px;
   outline: none;
   transition: all 0.2s ease;
-  font-family: inherit;
 }
-
-.select-wrapper select:hover {
-  border-color: var(--neutral-900);
-}
-
+.select-wrapper select:hover,
 .select-wrapper select:focus {
   border-color: var(--neutral-900);
+}
+.select-wrapper select:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
-
 .select-wrapper::after {
   content: "";
   position: absolute;
-  right: 0.75rem;
   top: 50%;
+  right: 0.75rem;
   transform: translateY(-50%);
-  width: 0;
-  height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid #6b7280;
   pointer-events: none;
 }
-
 .input-wrapper {
   position: relative;
 }
 .input-wrapper input {
-  max-width: 400px;
   width: 100%;
-  border: 1px solid #e1e5e9;
-  border-radius: 6px;
+  max-width: 400px;
   padding: 0.9rem 1rem 0.9rem 2.5rem;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.3px;
+  font-family: inherit;
   color: #374151;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
   outline: none;
   transition: all 0.2s ease;
-  font-family: inherit;
 }
-
 .input-wrapper input::placeholder {
-  color: #9ca3af;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 150%;
+  color: #9ca3af;
 }
-
-.input-wrapper input:hover {
-  border-color: var(--neutral-900);
-}
-
+.input-wrapper input:hover,
 .input-wrapper input:focus {
   border-color: var(--neutral-900);
+}
+.input-wrapper input:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
-
 .search-icon {
   position: absolute;
-  left: 0.9rem;
   top: 50%;
+  left: 0.9rem;
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
@@ -137,48 +121,42 @@
 }
 
 /* =======================
-   CARD  STYLES
+   CARD
 ======================= */
-
 .card-container {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 2.4rem !important;
 }
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem;
-  border: solid 1px #e0e6e3;
-  border-radius: 6px;
   gap: 1.6rem;
+  padding: 0.8rem;
   background: var(--neutral-0);
-}
-
-.card-img-wrapper {
+  border: 1px solid #e0e6e3;
+  border-radius: 6px;
 }
 .card-img {
-  border-radius: 6px;
-  max-width: 360px;
   width: 100%;
+  max-width: 360px;
+  border-radius: 6px;
 }
 .card-items {
   display: flex;
   flex-direction: column;
 }
-
 .card-heading {
-  font-weight: 700;
+  display: inline-block;
+  width: 344px;
+  margin-bottom: 1rem;
   font-size: 2rem;
+  font-weight: 700;
   line-height: 140%;
   letter-spacing: -0.5px;
   color: var(--neutral-900);
-  margin-bottom: 1rem;
-  display: inline-block;
-  width: 344px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -187,64 +165,55 @@
 .detail-subtitle {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #395852;
   line-height: 150%;
   letter-spacing: 0.3px;
+  color: #395852;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* faqat 2 qator ko‘rsatadi */
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
-
 .card-detail {
-  margin-top: 1.8rem;
   margin-top: 1.6rem;
 }
-.detail-start {
+.detail-start,
+.detail-end {
   display: flex;
   align-items: center;
-}
-
-.serving {
-  margin-right: 1.6rem;
-}
-.prep-time {
 }
 .detail-end {
   margin-top: 0.8rem;
-  display: flex;
-  align-items: center;
+}
+.serving {
+  margin-right: 1.6rem;
 }
 .view-btn {
-  background: var(--neutral-900);
+  width: 100%;
+  padding: 1.2rem 0;
   font-size: 1.6rem;
   font-weight: 700;
-  cursor: pointer;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
   color: #fff;
-  width: 100%;
+  background: var(--neutral-900);
   border-radius: 50px;
   text-align: center;
+  cursor: pointer;
 }
 
 /* =======================
-   RESPONSIVE STYLES
+   RESPONSIVE
 ======================= */
 @media (max-width: 1023px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-
 @media (max-width: 900px) {
   .healthy-container {
+    padding: 0;
     text-align: start;
     align-items: start;
-    padding: 0;
   }
 }
-
 @media (max-width: 768px) {
   .healthy-title {
     font-size: 4rem;
@@ -254,15 +223,13 @@
     align-items: stretch;
     gap: 0.75rem;
   }
-  .select-wrapper select {
-    display: block;
-  }
   .select-wrapper select,
   .input-wrapper input {
     width: 100%;
-    min-width: unset;
     max-width: 100%;
+    min-width: unset;
     font-size: 1.8rem;
+    display: block;
   }
   .card-container {
     grid-template-columns: 1fr !important;
