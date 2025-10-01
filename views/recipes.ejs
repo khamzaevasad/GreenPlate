@@ -173,7 +173,12 @@
               </div>
             </div>
             <!-- View btn -->
-            <a data-id="<%=item._id%>" href="#" class="view-btn">View recipe</a>
+            <a
+              data-id="<%=item._id%>"
+              href="/detail/<%= item._id %>"
+              class="view-btn"
+              >View recipe</a
+            >
           </div>
 
           <%})%>
