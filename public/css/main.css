@@ -4,6 +4,7 @@
 @import "./variables.css";
 @import "./about.css";
 @import "./recipes.css";
+@import "./detail.css";
 
 *,
 *::after,
