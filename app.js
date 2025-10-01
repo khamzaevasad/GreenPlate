@@ -2,6 +2,7 @@ console.log("start server");
 const express = require("express");
 const app = express();
 const db = require("./server");
+const { ObjectId } = require("mongodb");
 
 // MongoDB
 
@@ -59,6 +60,25 @@ app.get("/recipes.ejs", (req, res) => {
         res.render("recipes", { items: data });
       }
     });
+});
+
+app.get("/detail/:id", (req, res) => {
+  const recipeId = req.params.id;
+
+  db.collection("recipes").findOne(
+    { _id: new ObjectId(recipeId) },
+    (err, data) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send("Something went wrong");
+      }
+
+      if (!data) {
+        return res.status(404).send("Recipe not found");
+      }
+      res.render("detail", { item: data });
+    }
+  );
 });
 
 module.exports = app;
