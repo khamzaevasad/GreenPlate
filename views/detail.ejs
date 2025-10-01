@@ -19,9 +19,9 @@
           </a>
         </div>
         <div class="navbar-center">
-          <a class="menu-subtitle" href="./index.ejs">Home</a>
-          <a class="menu-subtitle" href="./about.ejs">About</a>
-          <a class="menu-subtitle" href="./recipes.ejs">Recipes</a>
+          <a class="menu-subtitle" href="/index.ejs">Home</a>
+          <a class="menu-subtitle" href="/about.ejs">About</a>
+          <a class="menu-subtitle" href="/recipes.ejs">Recipes</a>
         </div>
         <div class="navbar-end">
           <a class="btn-xs navbar-btn" href="#">Browse recipe</a>
@@ -52,10 +52,10 @@
         <div class="sidebar-header">
           <span id="closeBtn">✖</span>
         </div>
-        <a class="menu-subtitle" href="#">Home</a>
-        <a class="menu-subtitle" href="#">About</a>
-        <a class="menu-subtitle" href="#">Recipes</a>
-        <a class="menu-subtitle" href="#">Browse recipe</a>
+        <a class="menu-subtitle" href="/index.ejs">Home</a>
+        <a class="menu-subtitle" href="/about.ejs">About</a>
+        <a class="menu-subtitle" href="/recipes.ejs">Recipes</a>
+        <a class="menu-subtitle" href="/recipes.ejs">Browse recipe</a>
       </div>
 
       <!-- Overlay -->
@@ -206,6 +206,62 @@
           </div>
         </div>
       </section>
+
+      <!-- more recipe -->
+      <div class="line container"></div>
+      <section class="container">
+        <div class="card-container">
+          <%items.map((item) => {%>
+          <div class="card">
+            <!-- card img -->
+            <div class="card-img-wrapper">
+              <img
+                class="card-img"
+                src="<%= item.image.large%>"
+                alt="food-img"
+              />
+            </div>
+            <!-- card items -->
+            <div class="card-items">
+              <!-- titles -->
+              <div class="card-title-wrapper">
+                <h4 class="card-heading"><%= item.title%></h4>
+                <p class="card-description"><%= item.overview%></p>
+              </div>
+              <!-- detail info -->
+              <div class="card-detail">
+                <div class="detail-start">
+                  <img src="/images/icon-servings.svg" alt="icon" />
+                  <div class="detail-subtitle">
+                    Servings: <span class="serving"><%= item.servings%></span>
+                  </div>
+                  <img src="/images/icon-prep-time.svg" alt="icon" />
+                  <div class="detail-subtitle">
+                    Prep:
+                    <span class="prep-time"><%= item.prepMinutes%></span> mins
+                  </div>
+                </div>
+              </div>
+              <div class="detail-end">
+                <img src="/images/icon-cook-time.svg" alt="icon" />
+                <div class="detail-subtitle">
+                  Cook:
+                  <span class="cook-time"><%= item.cookMinutes%></span> min
+                </div>
+              </div>
+            </div>
+            <!-- View btn -->
+            <a
+              data-id="<%=item._id%>"
+              href="/detail/<%= item._id %>"
+              class="view-btn"
+              >View recipe</a
+            >
+          </div>
+
+          <%})%>
+        </div>
+      </section>
     </main>
     <!-- main end -->
 
@@ -223,6 +279,6 @@
 
     <!-- footer end -->
 
-    <!-- <script type="module" src="/js/index.js"></script> -->
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

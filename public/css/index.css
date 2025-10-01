@@ -130,6 +130,19 @@
    CARD SECTION STYLES
 ======================= */
 
+.card-main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  /* align-items: center; */
+  gap: 1.6rem;
+  padding: 0.8rem;
+
+  border-radius: 6px;
+}
+.card-img {
+}
+
 .card-main-title {
   font-size: 4.8rem;
   line-height: 120%;
