@@ -67,18 +67,33 @@ app.get("/detail/:id", (req, res) => {
 
   db.collection("recipes").findOne(
     { _id: new ObjectId(recipeId) },
-    (err, data) => {
+    (err, recipe) => {
       if (err) {
         console.log(err);
         return res.status(500).send("Something went wrong");
       }
 
-      if (!data) {
+      if (!recipe) {
         return res.status(404).send("Recipe not found");
       }
-      res.render("detail", { item: data });
+
+      db.collection("recipes")
+        .aggregate([
+          { $match: { _id: { $ne: new ObjectId(recipeId) } } },
+          { $sample: { size: 3 } },
+        ])
+        .toArray((err, recommended) => {
+          if (err) {
+            console.log(err);
+            return res.status(500).send("Something went wrong");
+          }
+
+          res.render("detail", {
+            item: recipe,
+            items: recommended,
+          });
+        });
     }
   );
 });
-
 module.exports = app;

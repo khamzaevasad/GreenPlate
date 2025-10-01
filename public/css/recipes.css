@@ -137,13 +137,34 @@
   padding: 0.8rem;
   background: var(--neutral-0);
   border: 1px solid #e0e6e3;
-  border-radius: 6px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Rasm zoom-in */
+.card-img-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
 .card-img {
   width: 100%;
-  max-width: 360px;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
 }
+
+.card:hover .card-img {
+  transform: scale(1.08); /* rasm zoom */
+}
+
 .card-items {
   display: flex;
   flex-direction: column;
@@ -197,8 +218,12 @@
   border-radius: 50px;
   text-align: center;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
+.view-btn:hover {
+  background-color: var(--neutral-600);
+}
 /* =======================
    RESPONSIVE
 ======================= */
