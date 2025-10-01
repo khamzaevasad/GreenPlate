@@ -203,4 +203,7 @@
   .mission-title {
     font-size: 4rem;
   }
+  .beyond-items {
+    margin: 0;
+  }
 }
